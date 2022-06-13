@@ -39,11 +39,11 @@
                         @foreach($listeSortie as $ls)
                         <tr>
                             <td>{{ $ls->id }}</td>
-                            <td>{{ $ls->produits_id }}</td>
+                            <td>{{ $ls->nomProduit }}</td>
                             <td>{{ $ls->quantite }}</td>
                             <td>{{ $ls->prix }}</td>
                             <td>{{ $ls->dateSortie }}</td>
-                            <td>{{ $ls->user_id->getAttributes()['name'] }}</td>
+                            <td>{{ $ls->nameUser }}</td>
                             <td>
                                 <a href="#" > <i class="fa fa-edit btn btn-warning"> </i>  </a>                                <a href="#" > <i class="fa fa-edit btn btn-warning"> </i>  </a>
                                 <a href="#" > <i class="fa fa-edit btn btn-warning"> </i>  </a>

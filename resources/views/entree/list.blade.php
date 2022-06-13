@@ -29,11 +29,11 @@
                         @foreach($listentree as $e)
                         <tr>
                             <td>{{ $e->id }}</td>
-                            <td>{{ $e->produits_id }}</td>
+                            <td>{{ $e->nomProduit }}</td>
                             <td>{{ $e->quantite }}</td>
                             <td>{{ $e->prix }}</td>
                             <td>{{ $e->dateEntree }}</td>
-                            <td> {{ $e->user_id}}</td>
+                            <td> {{ $e->nameUser}}</td>
                             <td>
                                 <a href="#" > <i class="fa fa-edit btn btn-warning"> </i>  </a>
                                 <a href="#" > <i class="fa fa-trash btn btn-danger"> </i>  </a>

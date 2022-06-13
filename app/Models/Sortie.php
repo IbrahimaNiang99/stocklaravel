@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Sortie extends Model
 {
+    use HasFactory;
+
     protected $fillable = array('produits_id', 'user_id', 'dateSortie', 'quantite', 'prix');
     public static $rule = array('produits_id'=>'required∣Integer',
                                 'user_id'=>'required∣bigInteger',
@@ -14,5 +16,16 @@ class Sortie extends Model
                                 'quantite'=>'required∣min:1',
                                 'prix'=>'required∣min:2'
     );
-    //use HasFactory;
+
+    public function getNameUserAttribute(){
+
+        $u = User::find($this->user_id);
+        return $u->name;
+    }
+
+    public function getNomProduitAttribute(){
+
+        $p = Produit::find($this->produits_id);
+        return $p->libelle;
+    }
 }

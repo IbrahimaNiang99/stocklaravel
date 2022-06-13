@@ -16,4 +16,16 @@ class Entree extends Model
                                 'prix'=>'required∣min:2'
     );
     //use HasFactory;
+
+    public function getNameUserAttribute(){
+
+        $u = User::find($this->user_id);
+        return $u->name;
+    }
+
+    public function getNomProduitAttribute(){
+
+        $p = Produit::find($this->produits_id);
+        return $p->libelle;
+    }
 }

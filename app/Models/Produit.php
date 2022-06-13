@@ -14,7 +14,17 @@ class Produit extends Model
                                  'stock'=>'required∣min:1'
     );
 
+    public function getNameUserAttribute(){
 
+        $u = User::find($this->user_id);
+        return $u->name;
+    }
+
+    public function getCategorieAttribute(){
+
+        $c = Categorie::find($this->categories_id);
+        return $c->nomCategorie;
+    }
 
     //use HasFactory;
 }

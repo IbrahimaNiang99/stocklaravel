@@ -24,9 +24,9 @@
                         <tr>
                             <td> {{ $p->id }} </td>
                             <td>{{ $p->libelle }}</td>
-                            <td>{{ $p->categories_id }}</td>
+                            <td>{{ $p->categorie }}</td>
                             <td>{{ $p->stock }}</td>
-                            <td>{{ $p->user_id }}</td>
+                            <td>{{ $p->nameUser }}</td>
                             <td>
                                 <a href="#" > <i class="fa fa-edit btn btn-warning"> </i>  </a>
                                 <a href="#" > <i class="fa fa-trash btn btn-danger"> </i>  </a>
