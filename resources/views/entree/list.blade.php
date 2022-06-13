@@ -45,6 +45,7 @@
                 </div>
 
                 <div class="card-footer">
+                    {{ $listentree->links() }}
                 </div>
             </div>
         </div>

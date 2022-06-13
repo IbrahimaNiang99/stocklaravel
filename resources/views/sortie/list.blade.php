@@ -12,11 +12,6 @@
                         {{ $sms }}
                     </div>
                     @endif
-                    @if(!empty($sms1))
-                    <div class="alert alert-danger h5" role="alert">
-                        {{ $sms1 }}
-                    </div>
-                    @endif
                     <span class="h2">Liste des sorties de produits</span>
                     <span>
                         <button type="button" class="btn btn-success offset-5" data-toggle="modal" data-target="#exampleModal"> <i class="fa fa-plus"></i>

@@ -32,7 +32,7 @@
 </div>
 <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
     <div class="container">
-        <a class="nav-link dropdown-toggle" href="#" id="logoutd" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ Auth::user()->name }}</a>
+        <a class="nav-link dropdown-toggle" href="#" id="logoutd" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user-circle"></i> {{ Auth::user()->name }}</a>
         <div class="dropdown-menu" aria-labelledby="logoutd">
             <a class="dropdown-item" href="{{ route('logout') }}"
                onclick="event.preventDefault();
@@ -58,16 +58,15 @@
                     <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Entrée</a>
                     <div class="dropdown-menu" aria-labelledby="dropdown04">
                         <a class="dropdown-item" href="{{ route('listentree') }}">Liste des entrées</a>
-                        <a class="dropdown-item" href="{{ route('addentree') }}">Ajouter une entrée</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sortie</a>
                     <div class="dropdown-menu" aria-labelledby="dropdown04">
                         <a class="dropdown-item" href="{{ route('listsortie') }}">Liste des sorties</a>
-                        <a class="dropdown-item" href="{{ route('addsortie') }}">Ajouter une sortie</a>
                     </div>
                 </li>
+                <li class="nav-item"><a href="{{ route('listutilisateur') }}" class="nav-link"></i>Utilisateur</a></li>
                 <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
             </ul>
         </div>

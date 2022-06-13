@@ -13,7 +13,7 @@ class entreeController extends Controller
     }
 
     public function list(){
-        $listentree = Entree::all();
+        $listentree = Entree::paginate(5);
         $listproduit = Produit::all();
         return view('entree.list', ['listentree'=>$listentree, 'listproduit'=>$listproduit]);
     }

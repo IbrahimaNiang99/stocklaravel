@@ -39,6 +39,10 @@ Route::get('/sortie/add', [App\Http\Controllers\sortieController::class, 'add'])
 Route::get('/sortie/list', [App\Http\Controllers\sortieController::class, 'list'])->name('listsortie');
 Route::post('/sortie/persist', [App\Http\Controllers\sortieController::class, 'persist'])->name('persistsortieproduit');
 
+Route::get('/utilisateur/add', [App\Http\Controllers\utilisateurController::class, 'add'])->name('addutilisateur');
+Route::get('/utilisateur/list',[App\Http\Controllers\utilisateurController::class, 'list'])->name('listutilisateur');
+Route::post('/utilisateur/persist',[App\Http\Controllers\utilisateurController::class, 'persist'])->name('persistutilisateur');
+
 
 
 
