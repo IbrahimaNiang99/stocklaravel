@@ -69,7 +69,7 @@
                         <label for="produit">Produit</label>
                         <select name="produit" id="" class="form-control">
                             @foreach($listproduit as $p)
-                                <option value="{{ $p->id }}">{{ $p->libelle }}</option>
+                                <option name="produit" value="{{ $p->id }}">{{ $p->libelle }}</option>
                             @endforeach
                         </select>
                     </div>
@@ -90,6 +90,7 @@
                     </div>
 
                     <div class="form-group">
+                        <input type="hidden" value="{{ Auth::user()->id }}" name="user_id">
                         <span> <input type="reset" value="Annuler" class="btn btn-danger"></span>
                         <span> <input type="Submit" name="enregistrer" value="Enregistrer" class="btn btn-success"></span>
                     </div>

@@ -56,11 +56,11 @@
                             <input type="text" class="form-control" name="libelle" placeholder="Nom du produit..." required>
                         </div>
                         <div class="form-group">
-                            <label for="categories_id">Catégorie</label>
-                            <select name="categories_id" class="form-control">
+                            <label for="categorie">Catégorie</label>
+                            <select name="categorie" class="form-control">
                                 <option >Choisir une catégorie ...</option>
                                 @foreach($listcategorie as $c)
-                                <option value="{{ $c->id }}" >{{ $c->nomCategorie }} </option>
+                                <option name="categorie" value="{{ $c->id }}" >{{ $c->nomCategorie }} </option>
                                 @endforeach
                             </select>
                         </div>
@@ -69,6 +69,7 @@
                             <input type="number" min="0" class="form-control" name="stock" placeholder="Quantité en stock..."  required>
                         </div>
                         <div class="form-group">
+                            <input type="hidden" value="{{ Auth::user()->id }}" name="user_id">
                             <span> <input type="Submit" class="btn btn-success" name="ajouter" value="Ajouter"> </span>
                             <span> <input type="Submit" class="btn btn-danger" value="Ajouter"> </span>
                         </div>

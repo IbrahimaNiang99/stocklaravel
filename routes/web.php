@@ -37,6 +37,8 @@ Route::post('/entree/persist', [App\Http\Controllers\entreeController::class, 'p
 
 Route::get('/sortie/add', [App\Http\Controllers\sortieController::class, 'add'])->name('addsortie');
 Route::get('/sortie/list', [App\Http\Controllers\sortieController::class, 'list'])->name('listsortie');
+Route::post('/sortie/persist', [App\Http\Controllers\sortieController::class, 'persist'])->name('persistsortieproduit');
+
 
 
 

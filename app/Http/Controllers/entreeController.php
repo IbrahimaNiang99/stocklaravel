@@ -19,13 +19,18 @@ class entreeController extends Controller
     }
 
     public function persist(Request $request){
-        $e = new Entree();
 
+        $e = new Entree();
         $e->produits_id = $request->produit;
         $e->quantite = $request->quantite;
         $e->dateEntree = $request->dateEntree;
         $e->prix = $request->prix;
-        $e->user_id = 1;
+        $e->user_id = $request->user_id;
+
+        //Mettre à jour la quantité en stock sur Produit
+        $pr = Produit::all()->find($e->produits_id);
+        $pr->stock += $request->quantite;
+        $pr->save();
 
         $e->save();
         return $this->list();

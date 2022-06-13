@@ -24,7 +24,7 @@ class produitController extends Controller
         $p->libelle = $request->libelle;
         $p->stock = $request->stock;
         $p->categories_id = $request->categorie;
-        $p->user_id = 1;
+        $p->user_id = $request->user_id;
 
         $p->save();
         return $this->list();
