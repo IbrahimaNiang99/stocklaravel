@@ -43,7 +43,6 @@
                         @endforeach
                     </table>
                 </div>
-
                 <div class="card-footer">
                     {{ $listentree->links() }}
                 </div>
