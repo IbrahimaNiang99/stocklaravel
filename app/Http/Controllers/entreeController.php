@@ -33,7 +33,26 @@ class entreeController extends Controller
         $pr->save();
 
         $e->save();
-        return $this->list();
+        return redirect('/entree/list');
+    }
+
+    public function edit($id){
+        $entree = Entree::find($id);
+        $listproduit = Produit::all();
+        return view('entree.edit', ['entree'=>$entree, 'listproduit'=>$listproduit]);
+    }
+
+    public function update(Request $request){
+        $entree = Entree::find($request->id);
+
+        $entree->produits_id = $request->produit;
+        $entree->quantite = $request->quantite;
+        $entree->dateEntree = $request->dateEntree;
+        $entree->prix = $request->prix;
+        $entree->user_id = $request->user_id;
+        dd($entree);
+        $entree->save();
+        return redirect('/entree/list');
     }
 
 }

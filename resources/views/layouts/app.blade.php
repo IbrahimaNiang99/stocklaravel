@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="{{ url ('menuTemp/css/style.css')}}">
-
+    <link rel="stylesheet" href="{{ url ('bootstrap/css/bootstrap-grid.css') }}">
 </head>
 <body>
 <div class="wrap">

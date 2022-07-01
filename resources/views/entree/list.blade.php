@@ -35,7 +35,7 @@
                             <td>{{ $e->dateEntree }}</td>
                             <td> {{ $e->nameUser}}</td>
                             <td>
-                                <a href="#" > <i class="fa fa-edit btn btn-warning"> </i>  </a>
+                                <a href="{{ route ('editentree', ['id'=> $e->id ]) }}" > <i class="fa fa-edit btn btn-warning"> </i>  </a>
                                 <a href="#" > <i class="fa fa-trash btn btn-danger"> </i>  </a>
                             </td>
 

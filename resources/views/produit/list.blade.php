@@ -28,8 +28,8 @@
                             <td>{{ $p->stock }}</td>
                             <td>{{ $p->nameUser }}</td>
                             <td>
-                                <a href="#" > <i class="fa fa-edit btn btn-warning"> </i>  </a>
-                                <a href="#" > <i class="fa fa-trash btn btn-danger"> </i>  </a>
+                                <a href="{{ route ('editproduit',['id'=> $p->id]) }}" > <i class="fa fa-edit btn btn-warning"> </i>  </a>
+                                <a href="{{ route ('deleteproduit',['id'=> $p->id]) }}" onclick="return confirm('Voulez-vous vraiment supprimer ce produit')" > <i class="fa fa-trash btn btn-danger"> </i>  </a>
                             </td>
                         </tr>
                         @endforeach
@@ -71,7 +71,7 @@
                         <div class="form-group">
                             <input type="hidden" value="{{ Auth::user()->id }}" name="user_id">
                             <span> <input type="Submit" class="btn btn-success" name="ajouter" value="Ajouter"> </span>
-                            <span> <input type="Submit" class="btn btn-danger" value="Ajouter"> </span>
+                            <span> <input type="Reset" class="btn btn-danger" value="Annuler" name="Annuler"> </span>
                         </div>
                     </form>
                 </div>
@@ -82,4 +82,5 @@
         </div>
     </div>
 </div>
+
 @endsection

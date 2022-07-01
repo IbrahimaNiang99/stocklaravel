@@ -25,4 +25,12 @@ class categorieController extends Controller
         return $this->list();
     }
 
+    public function delete($id){
+        $categorie = Categorie::find($id);
+        if($categorie != null){
+            $categorie->delete();
+        }
+        return $this->list();
+    }
+
 }

@@ -22,7 +22,7 @@
                             <td>{{ $c->nomCategorie }}</td>
                             <td>
                                 <a href="#" > <i class="fa fa-edit btn btn-warning"> </i>  </a>
-                                <a href="#" > <i class="fa fa-trash btn btn-danger"> </i>  </a>
+                                <a href="{{ route ('deletecategorie', [ 'id'=> $c->id ]) }}" onclick="return confirm('Voulez-vous vraiment supprimer cette catégorie ?')" > <i class="fa fa-trash btn btn-danger"> </i>  </a>
                             </td>
                         </tr>
                         @endforeach
