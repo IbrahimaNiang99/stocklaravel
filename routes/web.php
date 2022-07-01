@@ -19,6 +19,10 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::get('/utilisateur/add', [App\Http\Controllers\utilisateurController::class, 'add'])->name('addutilisateur');
+Route::get('/utilisateur/list',[App\Http\Controllers\utilisateurController::class, 'list'])->name('listutilisateur');
+Route::post('/utilisateur/persist',[App\Http\Controllers\utilisateurController::class, 'persist'])->name('persistutilisateur');
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/categorie/add', [App\Http\Controllers\categorieController::class, 'add'])->name('addcategorie');
@@ -44,11 +48,6 @@ Route::get('/entree/edit/{id}', [App\Http\Controllers\entreeController::class, '
 Route::get('/sortie/add', [App\Http\Controllers\sortieController::class, 'add'])->name('addsortie');
 Route::get('/sortie/list', [App\Http\Controllers\sortieController::class, 'list'])->name('listsortie');
 Route::post('/sortie/persist', [App\Http\Controllers\sortieController::class, 'persist'])->name('persistsortieproduit');
-
-Route::get('/utilisateur/add', [App\Http\Controllers\utilisateurController::class, 'add'])->name('addutilisateur');
-Route::get('/utilisateur/list',[App\Http\Controllers\utilisateurController::class, 'list'])->name('listutilisateur');
-Route::post('/utilisateur/persist',[App\Http\Controllers\utilisateurController::class, 'persist'])->name('persistutilisateur');
-
 
 
 

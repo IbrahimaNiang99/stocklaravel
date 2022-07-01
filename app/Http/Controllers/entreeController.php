@@ -50,7 +50,7 @@ class entreeController extends Controller
         $entree->dateEntree = $request->dateEntree;
         $entree->prix = $request->prix;
         $entree->user_id = $request->user_id;
-        dd($entree);
+        //dd($entree);
         $entree->save();
         return redirect('/entree/list');
     }
