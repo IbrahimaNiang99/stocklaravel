@@ -1,7 +1,5 @@
 <?php
-
 use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -35,8 +33,44 @@ Route::get('/produit/add', [App\Http\Controllers\produitController::class, 'add'
 Route::get('/produit/list', [App\Http\Controllers\produitController::class, 'list'])->name('listproduit');
 Route::post('/produit/update', [App\Http\Controllers\produitController::class, 'update'])->name('updateproduit');
 Route::get('/produit/edit/{id}', [App\Http\Controllers\produitController::class, 'edit'])->name('editproduit');
-Route::post('/produit/persist', [App\Http\Controllers\produitController::class, 'persist'])->name('persistproduit');
 Route::get('/produit/delete/{id}', [App\Http\Controllers\produitController::class, 'delete'])->name('deleteproduit');
+Route::post('/produit/persist', [App\Http\Controllers\produitController::class, 'persist'])->name('persistproduit');
+
+//Route pour imprimer la liste des produits
+Route::get('/produit/pdfListeProduit', [App\Http\Controllers\produitController::class, 'pdfListeProduit'])->name('pdfListeProduit');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Route::post('/produit/persist', [App\Http\Controllers\produitController::class, 'persist'])->name('persistproduit');
+
+
+
+
 
 
 Route::get('/entree/add', [App\Http\Controllers\entreeController::class, 'add'])->name('addentree');
@@ -48,6 +82,8 @@ Route::get('/entree/edit/{id}', [App\Http\Controllers\entreeController::class, '
 Route::get('/sortie/add', [App\Http\Controllers\sortieController::class, 'add'])->name('addsortie');
 Route::get('/sortie/list', [App\Http\Controllers\sortieController::class, 'list'])->name('listsortie');
 Route::post('/sortie/persist', [App\Http\Controllers\sortieController::class, 'persist'])->name('persistsortieproduit');
+
+
 
 
 

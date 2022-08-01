@@ -54,6 +54,7 @@
             <ul class="navbar-nav m-auto">
                 <li class="nav-item active"><a href="{{ route('listproduit') }}" class="nav-link">Produit</a></li>
                 <li class="nav-item"><a href="{{ route('listcategorie') }}" class="nav-link">Catégorie</a></li>
+
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Entrée</a>
                     <div class="dropdown-menu" aria-labelledby="dropdown04">

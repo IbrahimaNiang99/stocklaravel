@@ -6,7 +6,8 @@
         <div class="col-md-8">
             <div class="card ">
                 <div class="card-header">
-                    <span class="h3">Liste des produits</span>
+                    <span class="h3">Liste des produits </span>
+                    <span> <a href="{{ route ('pdfListeProduit') }}" class="btn btn-info offset-4" > Imprimer liste produits </a></span>
                 </div>
 
                 <div class="card-body">

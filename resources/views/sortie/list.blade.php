@@ -40,8 +40,8 @@
                             <td>{{ $ls->dateSortie }}</td>
                             <td>{{ $ls->nameUser }}</td>
                             <td>
-                                <a href="#" > <i class="fa fa-edit btn btn-warning"> </i>  </a>                                <a href="#" > <i class="fa fa-edit btn btn-warning"> </i>  </a>
                                 <a href="#" > <i class="fa fa-edit btn btn-warning"> </i>  </a>
+                                <a href="#" > <i class="fa fa-trash btn btn-danger"> </i>  </a>
                             </td>
 
                         </tr>

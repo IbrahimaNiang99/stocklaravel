@@ -15,6 +15,7 @@ class utilisateurController extends Controller
 
     public function persist(Request $request){
         $u = new User();
+        //dd($request);
         $u->name = $request->name;
         $u->email = $request->email;
 
