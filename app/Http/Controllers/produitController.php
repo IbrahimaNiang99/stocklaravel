@@ -31,11 +31,22 @@ class produitController extends Controller
         return $this->list();
     }
 
-    // API
+    // API get list produit
     public function getAll(){
         return Produit::all();
     }
 
+    // API get produit
+    public function getProduitById($id){
+        $p = Produit::find($id);
+        if (is_null($p)){
+            return \response()->json(['status'=>200, "message"=>"Ce produit n'existe pas "]);
+        }else{
+            return \response()->json([$p, "message"=>"Voila ton produit"]);
+        }
+    }
+
+    // API add produit
     public function addProd(Request $request){
         $p = new Produit();
         $p->libelle = $request->libelle;
@@ -47,7 +58,20 @@ class produitController extends Controller
         if ($result){
             return \response()->json(['status'=>200, 'message'=>'Bon']);
         }
-        //return $this->list();
+    }
+
+    // API Update produit
+    public function updateProd(Request $request, $id){
+
+        $p = Produit::find($id);
+        $p->libelle = $request->libelle;
+        $p->stock = $request->stock;
+        $p->categories_id = $request->categorie;
+        $p->user_id = $request->user_id;
+        $result = $p->save();
+        if ($result){
+            return \response()->json(['status'=>200, 'message'=>'Modifier']);
+        }
     }
 
     public function pdfListeProduit(){
